@@ -23,6 +23,7 @@ const Reviews = ({ getMovieData, movie, reviews, setReviews }) => {
       const updatedReviews = [...reviews, { body: rev.value }];
       rev.value = "";
       setReviews(updatedReviews);
+      console.log("updated reviews array" + updatedReviews);
     } catch (error) {
       console.log(error);
     }
@@ -59,9 +60,9 @@ const Reviews = ({ getMovieData, movie, reviews, setReviews }) => {
                 </Row>
               </>
             }
-            {reviews?.map((r) => {
+            {reviews?.map((r, i) => {
               return (
-                <>
+                <React.Fragment key={i}>
                   <Row>
                     <Col>{r.body}</Col>
                   </Row>
@@ -70,7 +71,7 @@ const Reviews = ({ getMovieData, movie, reviews, setReviews }) => {
                       <hr />
                     </Col>
                   </Row>
-                </>
+                </React.Fragment>
               );
             })}
           </Col>
