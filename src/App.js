@@ -10,8 +10,8 @@ import Reviews from "./components/reviews/Reviews";
 
 function App() {
   const [movies, setMovies] = useState();
-  const [reviews, setReviews] = useState();
-  const [movie, setMovie] = useState([]);
+  const [reviews, setReviews] = useState([]);
+  const [movie, setMovie] = useState();
 
   const getMovies = async () => {
     try {

@@ -27,7 +27,7 @@ const Reviews = ({ getMovieData, movie, reviews, setReviews }) => {
       console.log(error);
     }
   };
-  console.log("moviedata in reviewform " + movie);
+  // console.log("moviedata in reviewform " + movie);
   return (
     <div>
       <Container>
