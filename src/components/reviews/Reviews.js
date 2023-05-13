@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import ReviewForm from "../reviewForm/ReviewForm";
-import api from "../api/axiosConfig";
+import api from "../../api/axiosConfig";
 
 const Reviews = ({ getMovieData, movie, reviews, setReviews }) => {
   const revText = useRef();
